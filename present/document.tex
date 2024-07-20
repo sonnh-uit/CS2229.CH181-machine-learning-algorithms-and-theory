@@ -1,0 +1,64 @@
+\documentclass{IEEEtran}
+\usepackage[utf8]{vietnam}
+\usepackage[backend=biber, sorting=ynt,autolang=other]{biblatex}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+% Redefine bibliography strings for Vietnamese
+\DefineBibliographyStrings{english}{%
+  in          = {trong},
+  andothers   = {và những người khác},
+  pages       = {trang},
+  page        = {trang},
+  chapter     = {tập},
+}
+
+\renewcommand\IEEEkeywordsname{Từ khóa}
+\addbibresource{references.bib}
+
+\begin{document}
+
+\title{AngularGrad: A New Optimization Technique for Angular Convergence of Neural Networks \\
+\vspace{1cm}
+    Các tóm tắt chính
+}
+
+\author{
+    \IEEEauthorblockN{Nguyễn Hồng Sơn\IEEEauthorrefmark{1}\IEEEauthorrefmark{2}\\}
+    \IEEEauthorblockA{\IEEEauthorrefmark{1}Trường Đại học Công nghệ Thông tin}\\
+    \IEEEauthorblockA{\IEEEauthorrefmark{2}Email: sonnh.17@grad.uit.edu.vn}
+}
+
+\maketitle
+
+\begin{abstract}
+    Mạng nơ ron tích chập (CNN) được huấn luyện
+    sử dụng các trình tối ưu hóa dựa trên độ dốc giảm dần ngẫu nhiên (SGD). Gần đây, trình tối ưu hóa ước lượng thời điểm thích ứng (Adam) đã
+    trở nên rất phổ biến do động lực thích ứng của nó,
+    giải quyết vấn đề độ dốc sắp chết của SGD. Tuy nhiên, hiện có
+    trình tối ưu hóa vẫn không thể khai thác độ cong tối ưu hóa
+    thông tin một cách hiệu quả. Bài báo này đề xuất một AngularGrad mới
+    trình tối ưu hóa xem xét hành vi của hướng/góc của
+    gradient liên tiếp. Đây là nỗ lực đầu tiên trong văn học
+    để khai thác thông tin góc gradient ngoài
+    kích cỡ. AngularGrad được đề xuất tạo ra điểm số để
+    kiểm soát kích thước bước dựa trên thông tin góc gradient
+    của các lần lặp trước đó. Vì vậy, các bước tối ưu hóa trở nên
+    mượt mà hơn vì kích thước bước chính xác hơn của quá khứ ngay lập tức
+    độ dốc được ghi lại thông qua thông tin góc. Hai
+    các biến thể của AngularGrad được phát triển dựa trên việc sử dụng
+    Các hàm tang hoặc Cosine để tính toán góc gradient
+    thông tin. Về mặt lý thuyết, AngularGrad cũng thể hiện sự hối tiếc tương tự
+    bị ràng buộc như Adam cho mục đích hội tụ. Tuy nhiên, rộng rãi
+    các thử nghiệm được thực hiện trên các tập dữ liệu chuẩn so với các phương pháp tiên tiến cho thấy hiệu suất vượt trội của AngularGrad.
+\end{abstract}
+
+\begin{IEEEkeywords}
+    
+\end{IEEEkeywords}
+
+\section{Đặt vấn đề}
+
+
+\printbibliography[heading=bibintoc, title = {Tài liệu tham khảo}]
+\end{document}
